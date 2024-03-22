@@ -1,0 +1,155 @@
+/* CSS RESET */
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* CSS VARIABLES */
+:root {
+    --color-dark: #121212;
+
+    --color-light-1: #FFFFFFFF;
+    --color-light-2: #FAFAFCFF;
+    --color-light-3: #F0F0F4FF;
+    --color-light-4: #ECECECFF;
+    --color-light-5: #D6D6D6FF;
+
+    --color-brand: #DB1B1BFF;
+    --color-brand-dark: #c51818;
+    --color-brand-darker: #af1616;
+}
+
+/* STYLING */
+body {
+    background: var(--color-light-4);
+}
+
+#form-tech {
+    transform: translateY(-222px);
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.black-background {
+    background: var(--color-dark);
+    height: 368px;
+}
+
+.section-header {
+    color: var(--color-light-1);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+
+    & > .title {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 42px;
+    }
+
+    & > .subtitle {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 26px;
+    }
+}
+
+.section-card {
+    color: var(--color-dark);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background: var(--color-light-2);
+    border: 1px solid var(--color-light-5);
+    border-radius: 8px 8px 0 0;
+    padding: 64px;
+
+    & > .title {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 34px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid var(--color-light-4)
+    }
+}
+
+.text-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    & > .label {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    & > .input {
+        background: var(--color-light-1);
+        border: 1px solid var(--color-light-4);
+        border-radius: 8px;
+        font-size: 16px;
+        padding: 8px 16px;
+        height: 56px;
+        outline: none;
+        transition: all 0.3s ease;
+
+        &:focus,
+        &:active {
+            border-color: var(--color-brand);
+        }
+    }
+
+     & > .textarea {
+         background: var(--color-light-1);
+         border: 1px solid var(--color-light-4);
+         border-radius: 8px;
+         font-size: 16px;
+         padding: 16px;
+         outline: none;
+         transition: all 0.3s ease;
+         resize: none;
+
+         &:focus,
+         &:active {
+             border-color: var(--color-brand);
+         }
+     }
+}
+
+
+.submit-container {
+    padding: 40px 64px;
+    background: var(--color-light-3);
+    border-radius: 0 0 8px 8px;
+    border: 1px solid var(--color-light-5);
+    border-top: none;
+
+    & > .button {
+        background: var(--color-brand);
+        height: 56px;
+        border-radius: 8px;
+        outline: none;
+        width: 100%;
+        border: none;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 26px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.02);
+            background: var(--color-brand-dark);
+        }
+
+        &:focus,
+        &:active {
+            background: var(--color-brand-darker);
+        }
+    }
+}
